@@ -2,10 +2,14 @@
 // Address all the TODOs to make the tests pass!
 // Execute `rustlings hint enums3` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+// TODO: learn functional programming, maybe using scala so it can be easier
 
 enum Message {
-    // TODO: implement the message variant types based on their usage below
+    ChangeColor((i32, i32, i32)),
+    Echo(String),
+    Point {x: i32, y: i32},
+    Move(Point),
+    Quit
 }
 
 struct Point {
@@ -48,9 +52,9 @@ mod tests {
     #[test]
     fn test_match_message_call() {
         let mut state = State {
-            quit: false,
-            position: Point { x: 0, y: 0 },
-            color: (0, 0, 0),
+            quit: true,
+            position: Point { x: 10, y: 15 },
+            color: (255, 0, 255),
         };
         state.process(Message::ChangeColor((255, 0, 255)));
         state.process(Message::Echo(String::from("hello world")));

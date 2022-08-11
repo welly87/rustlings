@@ -2,7 +2,7 @@
 // Make me compile without changing the function signature!
 // Execute `rustlings hint strings1` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+// TODO: always think of allocation when you see object, string etc. that's why avoid Json etc
 
 fn main() {
     let answer = current_favorite_color();
@@ -10,5 +10,5 @@ fn main() {
 }
 
 fn current_favorite_color() -> String {
-    "blue"
+    "blue".to_string()
 }
